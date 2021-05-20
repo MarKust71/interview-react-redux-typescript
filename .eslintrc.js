@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
   settings: {
     react: {
@@ -8,6 +7,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -27,7 +27,11 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    'quotes': [
+    'quote-props': 0,
+    indent: ['error', 2],
+    'require-jsdoc': 0,
+    'object-curly-spacing': 0,
+    quotes: [
       'error',
       'single',
       {
@@ -41,17 +45,17 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/jsx-filename-extension': [
       'error',
-      {extensions: ['.tsx', '.types', '.styles']},
+      { extensions: ['.tsx', '.types', '.styles'] },
     ],
     'import/extensions': [
       'error',
       'never',
-      {svg: 'always', tsx: 'never', types: 'never'},
+      { svg: 'always', tsx: 'never', types: 'never' },
     ],
     'import/order': [
       'error',
       {
-        'groups': [
+        groups: [
           ['external', 'builtin'],
           ['parent', 'internal'],
           ['index', 'sibling'],
@@ -75,9 +79,9 @@ module.exports = {
     'react-hooks/rules-of-hooks': 2,
     'react-hooks/exhaustive-deps': [
       'error',
-      {additionalHooks: '(useMemoOne)'},
+      { additionalHooks: '(useMemoOne)' },
     ],
-    'camelcase': 2,
+    camelcase: 2,
     'prefer-destructuring': 2,
     'no-nested-ternary': 2,
   },
