@@ -26,9 +26,6 @@
     "eslint:fix": "eslint --fix .",
     "prettier:fix": "prettier --write ."
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -53,7 +50,9 @@
     "@typescript-eslint/parser": "^4.24.0",
     "eslint": "^7.26.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.0"
   }
 }
